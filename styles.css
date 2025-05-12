@@ -1,0 +1,267 @@
+body#index-page {
+    background-image: url('City.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body#my-services-page {
+    background-image: url('Brainstorm.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body#testimonials-page {
+    background-image: url('testimonial.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0.5rem 0; /* Thinner header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Position it at the top */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+nav .nav-left, nav .nav-right {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav .nav-left li, nav .nav-right li {
+    margin-right: 1.5rem;
+}
+
+nav .nav-left img {
+    margin-right: 0.5rem;
+    width: 60px; /* Increased size by 1.5 times */
+    height: 60px; /* Increased size by 1.5 times */
+}
+
+nav .nav-right li:last-child {
+    margin-right: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem; /* Increased padding for more spacing */
+    background-color: rgba(255, 255, 255, 0.3); /* Ensure slightly transparent background */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 6rem;
+}
+
+h2 {
+    margin: 0.5rem 0;
+    text-align: center;
+    color: #063655;
+    font-size: 2rem; /* Larger font size for Customer Testimonials heading */
+}
+
+h3 {
+    margin: 0.5rem 0;
+    text-align: center;
+    color: #063655;
+    font-size: 1.5rem; /* Larger font size for names */
+}
+
+h4 {
+    margin: 0.5rem 0;
+    text-align: center;
+    color: #063655;
+    font-size: 1.2rem; /* Larger font size for titles */
+}
+
+p, ul, li {
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0.5rem 0;
+    color: #000;
+}
+
+section {
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+    background-color: rgba(255, 255, 255, 1); 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+section.testimonial {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+section.testimonial img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+section.testimonial div {
+    flex: 1;
+}
+
+section.testimonial.centered {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+section.testimonial.centered img {
+    margin-bottom: 1rem;
+    margin-right: 0;
+}
+
+.testimonial-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer {
+    text-align: center;
+    padding: 0.5rem;
+    border-top: 1px solid #eaeaea;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.footer p {
+    text-align: center;
+}
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-img {
+    display: block;
+    margin: 0 auto 1rem;
+    border-radius: 15px;
+    width: 300px;
+    height: 300px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablets (landscape) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 767px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav .nav-right {
+        display: none;
+    }
+
+    .dropdown {
+        display: block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 1rem;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    section {
+        padding: 1rem 0.5rem;
+    }
+
+    .profile-img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .footer {
+        max-width: 100%;
+    }
+
+    .nav-left li strong {
+        display: none;
+    }
+
+    .nav-left li::after {
+        content: "Stuart McMillan";
+        display: inline-block;
+        font-weight: bold;
+    }
+
+    .testimonial-row {
+        flex-direction: column;
+    }
+
+    .testimonial-row section {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Hide dropdown menu button on larger screens */
+@media (min-width: 768px) {
+    .dropdown {
+        display: none;
+    }
+}
