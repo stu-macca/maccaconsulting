@@ -9,4 +9,4 @@ Disallow: /register/
 Disallow: /config/
 
 # Sitemap location (point at your GitHub Pages domain)
-Sitemap: https://mcmillanconsulting.com.au/sitemap.xml
+Sitemap: https://mcmillantendering.com.au/sitemap.xml
