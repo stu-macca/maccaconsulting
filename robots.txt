@@ -1,0 +1,12 @@
+# Allow all crawlers access to all content
+User-agent: *
+Disallow:
+
+# Block access to any private dirs (if you ever add them)
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /config/
+
+# Sitemap location (point at your GitHub Pages domain)
+Sitemap: https://mcmillanconsulting.com.au/sitemap.xml
