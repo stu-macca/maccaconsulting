@@ -1,5 +1,6 @@
 /* Backgrounds per page */
-body#index-page {
+body#index-page,
+body#apps-page {
     background-image: url('City.jpg');
     background-size: cover;
     background-attachment: fixed;
@@ -7,7 +8,8 @@ body#index-page {
     background-position: center;
 }
 
-body#my-services-page {
+body#my-services-page,
+body#pdf-editor-page {
     background-image: url('Brainstorm.jpg');
     background-size: cover;
     background-attachment: fixed;
@@ -36,7 +38,7 @@ body {
 nav {
     background-color: #fff;
     border-bottom: 1px solid #eaeaea;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 0.5rem 0;
     display: flex;
     justify-content: space-between;
@@ -46,7 +48,8 @@ nav {
     z-index: 1000;
 }
 
-nav .nav-left, nav .nav-right {
+nav .nav-left,
+nav .nav-right {
     display: flex;
     align-items: center;
     list-style: none;
@@ -54,14 +57,19 @@ nav .nav-left, nav .nav-right {
     padding: 0;
 }
 
-nav .nav-left li, nav .nav-right li {
-    margin-right: 1.5rem;
+nav .nav-left li,
+nav .nav-right li {
+    margin-right: 1.25rem;
 }
 
 nav .nav-left img {
     margin-right: 0.5rem;
     width: 60px;
     height: 60px;
+}
+
+nav .nav-left strong {
+    color: #063655;
 }
 
 nav .nav-right li:last-child {
@@ -74,12 +82,15 @@ nav .nav-right li:last-child {
     margin: 0 auto;
     padding: 2rem 1rem;
     background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 6rem;
 }
 
 /* Headings */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     margin: 0.5rem 0;
     text-align: center;
     color: #063655;
@@ -99,7 +110,9 @@ hgroup h1 {
 }
 
 /* Text */
-p, ul, li {
+p,
+ul,
+li {
     line-height: 1.6;
     text-align: justify;
     margin: 0.5rem 0;
@@ -111,7 +124,151 @@ section {
     padding: 2rem 1rem;
     margin: 2rem 0;
     background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Apps */
+.apps-grid,
+.screenshot-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.apps-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.app-card,
+.screenshot-card,
+.pricing-panel {
+    border: 1px solid #d9e1e8;
+    border-radius: 10px;
+    padding: 1.5rem;
+    background-color: #fff;
+}
+
+.app-card h3,
+.screenshot-card h3,
+.screenshot-card p,
+.pricing-panel p,
+.app-card p,
+.feature-list li,
+.who-its-for li {
+    text-align: left;
+}
+
+.app-card h3 {
+    margin-top: 0;
+}
+
+.status-badge {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.status-available {
+    background-color: #dbeee0;
+    color: #1f5c2f;
+}
+
+.status-coming-soon {
+    background-color: #f3ead2;
+    color: #7a5a14;
+}
+
+.status-planned {
+    background-color: #dde7f1;
+    color: #1d4d74;
+}
+
+.cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.cta-row a[role="button"] {
+    margin: 0;
+}
+
+.app-card .cta-row {
+    justify-content: flex-start;
+}
+
+.app-hero-image,
+.app-card-icon,
+.screenshot-card img {
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.app-hero-image {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 10px;
+    border: 1px solid #d9e1e8;
+    background-color: #fff;
+}
+
+.app-card-icon {
+    width: 96px;
+    height: 96px;
+}
+
+.feature-list,
+.who-its-for {
+    padding-left: 1.5rem;
+}
+
+.feature-list li,
+.who-its-for li {
+    margin-bottom: 0.75rem;
+}
+
+.pricing-panel {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.pricing-panel h3,
+.pricing-panel p {
+    text-align: center;
+}
+
+.price-placeholder {
+    display: block;
+    margin: 0.75rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #063655;
+    text-align: center;
+}
+
+.faq-list details {
+    margin-bottom: 1rem;
+    border: 1px solid #d9e1e8;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    background-color: #fff;
+}
+
+.faq-list summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: #063655;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 1rem;
 }
 
 /* Testimonials */
@@ -149,7 +306,7 @@ section.testimonial.centered img {
     gap: 2rem;
 }
 
-/* FORM FIX (Pico override) */
+/* Form overrides */
 form label {
     color: #063655 !important;
     font-weight: 600;
@@ -186,7 +343,7 @@ form select:focus {
     max-width: 800px;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .footer p {
@@ -206,6 +363,14 @@ form select:focus {
     border-radius: 15px;
     width: 300px;
     height: 300px;
+}
+
+.wide-logo {
+    display: block;
+    margin: 0 auto 1rem;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Tablet */
@@ -234,9 +399,10 @@ form select:focus {
     .dropdown-content {
         display: none;
         position: absolute;
+        right: 0.75rem;
         background-color: #fff;
-        min-width: 160px;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        min-width: 180px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         z-index: 1;
     }
 
@@ -291,11 +457,24 @@ form select:focus {
     .testimonial-row section {
         margin-bottom: 2rem;
     }
+
+    .cta-row {
+        justify-content: stretch;
+    }
+
+    .cta-row a[role="button"] {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* Hide dropdown on desktop */
 @media (min-width: 768px) {
     .dropdown {
         display: none;
+    }
+
+    .screenshot-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
 }

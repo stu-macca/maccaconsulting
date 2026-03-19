@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">PDF Editor icon placeholder</title>
+  <desc id="desc">A placeholder icon for the PDF Editor desktop app.</desc>
+  <rect width="256" height="256" rx="32" fill="#f3f6f9"/>
+  <rect x="44" y="28" width="132" height="180" rx="14" fill="#ffffff" stroke="#063655" stroke-width="8"/>
+  <polygon points="176,28 212,64 212,208 176,208" fill="#dbe3eb" stroke="#063655" stroke-width="8" stroke-linejoin="round"/>
+  <text x="128" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="46" font-weight="700" fill="#063655">PDF</text>
+  <rect x="70" y="154" width="116" height="14" rx="7" fill="#5f87a7"/>
+  <rect x="70" y="176" width="88" height="14" rx="7" fill="#9bb3c7"/>
+</svg>
