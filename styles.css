@@ -141,6 +141,12 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
+body#apps-page .apps-grid {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
 .app-card,
 .screenshot-card,
 .pricing-panel {
@@ -455,6 +461,17 @@ form select:focus {
 .buy-section li,
 .buy-section .note {
     text-align: center;
+}
+
+.tools-promo p,
+.tools-promo li,
+.tools-promo .note,
+.tools-promo .how-it-works ol {
+    text-align: left;
+}
+
+.tools-promo .how-it-works {
+    max-width: 620px;
 }
 
 .buy-section .note {
