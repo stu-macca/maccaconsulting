@@ -269,13 +269,14 @@ section {
 
 .pricing-points li {
     margin-bottom: 0.5rem;
-    text-align: center;
+    text-align: left;
 }
 
 .launch-steps {
     max-width: 520px;
     margin: 0 auto;
     padding-left: 1.5rem;
+    text-align: left;
 }
 
 .launch-steps li {
