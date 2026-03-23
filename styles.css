@@ -9,7 +9,8 @@ body#apps-page {
 }
 
 body#my-services-page,
-body#pdf-editor-page {
+body#pdf-editor-page,
+body#terms-licence-page {
     background-image: url('Brainstorm.jpg');
     background-size: cover;
     background-attachment: fixed;
@@ -299,6 +300,12 @@ section {
 .back-link {
     display: inline-block;
     margin-top: 1rem;
+}
+
+.legal-meta,
+.legal-meta p,
+.legal-meta small {
+    text-align: center;
 }
 
 /* Testimonials */
