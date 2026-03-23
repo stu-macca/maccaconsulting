@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Submissions PDF icon placeholder</title>
+  <desc id="desc">A placeholder icon for the Submissions PDF desktop app.</desc>
+  <rect width="256" height="256" rx="32" fill="#f3f6f9"/>
+  <rect x="34" y="36" width="96" height="168" rx="14" fill="#ffffff" stroke="#063655" stroke-width="8"/>
+  <rect x="148" y="52" width="74" height="40" rx="10" fill="#063655"/>
+  <rect x="148" y="112" width="74" height="16" rx="8" fill="#9bb3c7"/>
+  <rect x="148" y="138" width="74" height="16" rx="8" fill="#9bb3c7"/>
+  <rect x="148" y="164" width="74" height="16" rx="8" fill="#9bb3c7"/>
+  <text x="82" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#063655">DOC</text>
+  <path d="M70 156h24l20 20 44-44" fill="none" stroke="#1f5c2f" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

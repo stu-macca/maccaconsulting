@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Submissions PDF hero placeholder</title>
+  <desc id="desc">A placeholder hero illustration for the Submissions PDF product page.</desc>
+  <rect width="1200" height="720" fill="#eef3f7"/>
+  <rect x="90" y="80" width="1020" height="560" rx="28" fill="#ffffff" stroke="#d0dbe4" stroke-width="4"/>
+  <rect x="90" y="80" width="1020" height="70" rx="28" fill="#063655"/>
+  <circle cx="140" cy="115" r="12" fill="#ffffff" opacity="0.65"/>
+  <circle cx="180" cy="115" r="12" fill="#ffffff" opacity="0.65"/>
+  <circle cx="220" cy="115" r="12" fill="#ffffff" opacity="0.65"/>
+  <rect x="150" y="188" width="250" height="354" rx="18" fill="#f5f7fa" stroke="#d0dbe4" stroke-width="3"/>
+  <rect x="430" y="188" width="176" height="84" rx="16" fill="#dbe3eb"/>
+  <rect x="626" y="188" width="176" height="84" rx="16" fill="#dbeee0"/>
+  <rect x="822" y="188" width="176" height="84" rx="16" fill="#f3ead2"/>
+  <rect x="430" y="308" width="568" height="22" rx="11" fill="#c4d4e2"/>
+  <rect x="430" y="346" width="520" height="22" rx="11" fill="#d9e4ed"/>
+  <rect x="430" y="384" width="488" height="22" rx="11" fill="#d9e4ed"/>
+  <rect x="430" y="422" width="430" height="22" rx="11" fill="#d9e4ed"/>
+  <rect x="430" y="478" width="216" height="56" rx="14" fill="#063655"/>
+  <rect x="668" y="478" width="216" height="56" rx="14" fill="#dbe3eb"/>
+  <text x="275" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#063655">Submission Register</text>
+  <rect x="182" y="290" width="186" height="18" rx="9" fill="#9bb3c7"/>
+  <rect x="182" y="324" width="154" height="18" rx="9" fill="#9bb3c7"/>
+  <rect x="182" y="358" width="170" height="18" rx="9" fill="#9bb3c7"/>
+  <rect x="182" y="420" width="186" height="54" rx="12" fill="#dbeee0"/>
+  <text x="714" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#063655">Submissions PDF</text>
+  <text x="538" y="514" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#ffffff">Convert and combine</text>
+  <text x="776" y="514" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#063655">Rename from register</text>
+</svg>

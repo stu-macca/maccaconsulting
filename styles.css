@@ -10,7 +10,9 @@ body#apps-page {
 
 body#my-services-page,
 body#pdf-editor-page,
-body#terms-licence-page {
+body#terms-licence-page,
+body#submissions-pdf-page,
+body#submissions-pdf-terms-page {
     background-image: url('Brainstorm.jpg');
     background-size: cover;
     background-attachment: fixed;
@@ -270,6 +272,11 @@ section {
 .pricing-points li {
     margin-bottom: 0.5rem;
     text-align: left;
+}
+
+.pricing-note {
+    text-align: center;
+    color: #4b5563;
 }
 
 .launch-steps {
