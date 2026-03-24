@@ -254,21 +254,54 @@ function setLoadingState(isLoading, titleText = "", messageText = "") {
 
 function showInvalidState(titleText, messageText) {
   setLoadingState(false);
-  invalidTitle.textContent = titleText;
-  invalidMessage.textContent = messageText;
-  retryLink.href = appContext.appId
-    ? `/auth/forgot-password/?app=${encodeURIComponent(appContext.appId)}`
-    : "/auth/forgot-password/";
-  invalidPanel.hidden = false;
+
+  if (invalidTitle) {
+    invalidTitle.textContent = titleText;
+  }
+
+  if (invalidMessage) {
+    invalidMessage.textContent = messageText;
+  }
+
+  if (retryLink) {
+    retryLink.href = appContext.appId
+      ? `/auth/forgot-password/?app=${encodeURIComponent(appContext.appId)}`
+      : "/auth/forgot-password/";
+  }
+
+  if (invalidPanel) {
+    invalidPanel.hidden = false;
+  }
 }
 
 function showSuccessPanel(titleText, messageText, nextStepText) {
   setLoadingState(false);
-  forgotForm.hidden = true;
-  passwordForm.hidden = true;
-  invalidPanel.hidden = true;
-  successTitle.textContent = titleText;
-  successMessage.textContent = messageText;
-  successNextStep.textContent = nextStepText;
-  successPanel.hidden = false;
+
+  if (forgotForm) {
+    forgotForm.hidden = true;
+  }
+
+  if (passwordForm) {
+    passwordForm.hidden = true;
+  }
+
+  if (invalidPanel) {
+    invalidPanel.hidden = true;
+  }
+
+  if (successTitle) {
+    successTitle.textContent = titleText;
+  }
+
+  if (successMessage) {
+    successMessage.textContent = messageText;
+  }
+
+  if (successNextStep) {
+    successNextStep.textContent = nextStepText;
+  }
+
+  if (successPanel) {
+    successPanel.hidden = false;
+  }
 }
