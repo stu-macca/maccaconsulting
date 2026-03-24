@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LCSVXLF1W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4LCSVXLF1W');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+  <title>Reset your password | McMillan Tendering</title>
+  <meta name="description" content="Choose a new password for your McMillan Tendering desktop app account.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="canonical" href="https://mcmillantendering.com.au/auth/reset-password/">
+</head>
+<body id="auth-page" data-auth-page="reset">
+  <main class="auth-shell">
+    <section class="auth-card">
+      <a href="/apps.html" class="auth-back-link">Back to Tools</a>
+      <div class="auth-branding">
+        <img id="auth-app-logo" src="" alt="" hidden>
+        <p id="auth-app-label" class="auth-app-label">Shared account access</p>
+      </div>
+      <hgroup>
+        <h1 id="auth-title">Reset your password</h1>
+        <p id="auth-subtitle">Choose a new password for your account.</p>
+      </hgroup>
+      <div id="auth-notice" class="auth-notice" hidden></div>
+      <form id="forgot-password-form" hidden novalidate></form>
+      <form id="password-form" hidden novalidate>
+        <label for="password">New password</label>
+        <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+        <label for="confirmPassword">Confirm new password</label>
+        <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" minlength="8" required>
+        <p class="auth-help-text">Use at least 8 characters.</p>
+        <button id="auth-submit-button" type="submit">Update password</button>
+      </form>
+      <div id="auth-success-panel" class="auth-state-panel" hidden>
+        <h2 id="auth-success-title">Password updated</h2>
+        <p id="auth-success-message">Your password has been updated successfully.</p>
+        <p id="auth-success-next-step">Return to the app and sign in again.</p>
+      </div>
+      <div id="auth-loading-panel" class="auth-state-panel" hidden>
+        <h2 id="auth-loading-title">Validating your reset link</h2>
+        <p id="auth-loading-message">Please wait while we validate your link.</p>
+      </div>
+      <div id="auth-invalid-panel" class="auth-state-panel" hidden>
+        <h2 id="auth-invalid-title">This reset link is invalid or expired</h2>
+        <p id="auth-invalid-message">Request a fresh reset link and try again.</p>
+        <a id="auth-invalid-retry-link" href="/auth/forgot-password/" role="button" class="secondary">Request a new link</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer auth-footer">
+    <a href="/apps.html">Tools</a> &bull;
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <p>&copy; 2026 Macca Consulting Pty Ltd | ACN: 679 210 309</p>
+  </footer>
+  <script src="/auth/auth-config.js"></script>
+  <script type="module" src="/auth/auth-page.js"></script>
+</body>
+</html>
