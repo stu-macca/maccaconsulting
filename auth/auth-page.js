@@ -88,17 +88,34 @@ function initialiseForgotPasswordPage() {
 
     try {
       const redirectTo = buildRedirectUrl(config.resetPasswordUrl, appContext.appId);
-      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+
+      // 🔍 DEBUG LOGS
+      console.log("resetPasswordForEmail email:", email);
+      console.log("resetPasswordForEmail redirectTo:", redirectTo);
+      console.log("Supabase URL:", config.supabaseUrl);
+
+      const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
         redirectTo
       });
 
+      console.log("Supabase response:", { data, error });
+
       if (error) {
+        console.error("Supabase resetPasswordForEmail error:", error);
         throw error;
       }
 
       forgotForm.reset();
-      showSuccessPanel(copy.successTitle, copy.successMessage, "Use the link in the email to choose a new password.");
+
+      showSuccessPanel(
+        copy.successTitle,
+        copy.successMessage,
+        "Use the link in the email to choose a new password."
+      );
+
     } catch (error) {
+      console.error("Final caught error:", error);
+
       showNotice(
         noticeElement,
         error?.message || "We could not send the reset email right now. Try again shortly.",
