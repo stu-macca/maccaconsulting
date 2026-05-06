@@ -10,10 +10,11 @@
     <script>
         (function () {
             const path = window.location.pathname.replace(/\/+$/, "");
-            const submissionProductPath = "/apps/submissions-pdf.html";
+            const submissionsDownloadPath = "/downloads/submissions-pdf.exe";
+            const submissionsDownloadUrl = "https://github.com/stu-macca/mcmillan-downloads/releases/download/submissions-pdf-v1.0.0/Submissions.PDF.Setup.1.0.0.exe";
 
-            if (path === "/downloads/submissions-pdf.exe") {
-                window.location.replace(submissionProductPath);
+            if (path === submissionsDownloadPath) {
+                window.location.replace(submissionsDownloadUrl);
             }
         }());
     </script>
@@ -25,8 +26,8 @@
                 <h1>Page not found</h1>
                 <p>The page you requested is not available.</p>
             </hgroup>
-            <p>If you were trying to find Submission PDF, use the product page below.</p>
-            <p><a href="/apps/submissions-pdf.html" role="button">View Submission PDF</a></p>
+            <p>If you were trying to download Submissions PDF, use the product page below.</p>
+            <p><a href="/apps/submissions-pdf.html" role="button">View Submissions PDF</a></p>
         </section>
     </main>
 </body>

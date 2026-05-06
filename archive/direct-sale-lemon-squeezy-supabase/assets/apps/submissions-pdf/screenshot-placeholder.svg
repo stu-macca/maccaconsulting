@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Submissions PDF screenshot placeholder</title>
+  <desc id="desc">A placeholder screenshot for the Submissions PDF desktop app.</desc>
+  <rect width="1200" height="720" fill="#f5f7fa"/>
+  <rect x="78" y="72" width="1044" height="576" rx="24" fill="#ffffff" stroke="#d0dbe4" stroke-width="4"/>
+  <rect x="78" y="72" width="1044" height="64" rx="24" fill="#063655"/>
+  <rect x="120" y="178" width="244" height="410" rx="18" fill="#f8fafc" stroke="#d9e1e8" stroke-width="3"/>
+  <rect x="396" y="178" width="314" height="410" rx="18" fill="#f8fafc" stroke="#d9e1e8" stroke-width="3"/>
+  <rect x="742" y="178" width="338" height="410" rx="18" fill="#f8fafc" stroke="#d9e1e8" stroke-width="3"/>
+  <text x="242" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#063655">Files</text>
+  <text x="553" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#063655">Register Preview</text>
+  <text x="911" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#063655">Output</text>
+  <rect x="144" y="266" width="196" height="18" rx="9" fill="#c4d4e2"/>
+  <rect x="144" y="302" width="160" height="18" rx="9" fill="#d9e4ed"/>
+  <rect x="144" y="338" width="182" height="18" rx="9" fill="#d9e4ed"/>
+  <rect x="420" y="266" width="268" height="18" rx="9" fill="#c4d4e2"/>
+  <rect x="420" y="302" width="268" height="18" rx="9" fill="#d9e4ed"/>
+  <rect x="420" y="338" width="236" height="18" rx="9" fill="#d9e4ed"/>
+  <rect x="766" y="266" width="288" height="18" rx="9" fill="#c4d4e2"/>
+  <rect x="766" y="302" width="256" height="18" rx="9" fill="#d9e4ed"/>
+  <rect x="766" y="338" width="272" height="18" rx="9" fill="#d9e4ed"/>
+  <rect x="420" y="482" width="268" height="58" rx="14" fill="#dbeee0"/>
+  <text x="600" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#063655">Placeholder screenshot until production image is added</text>
+</svg>
