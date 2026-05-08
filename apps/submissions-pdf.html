@@ -8,6 +8,19 @@
       gtag('js', new Date());
       gtag('config', 'G-4LCSVXLF1W');
       gtag('config', 'AW-18147235295');
+
+      function gtagSendEvent(url) {
+        var callback = function () {
+          if (typeof url === 'string') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'manual_event_PURCHASE', {
+          'event_callback': callback,
+          'event_timeout': 2000
+        });
+        return false;
+      }
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -66,7 +79,7 @@
             <p>Submission PDF is built for practical submissions work. It supports the final preparation stage of a tender by helping you convert files, package them, and organise them against a numbered Submission Register without overcomplicating the workflow.</p>
             <p>It is especially useful where submissions contain multiple response documents, supporting attachments, reused evidence files, and final naming requirements for upload portals or shared folders.</p>
             <div class="cta-row">
-                <a href="https://apps.microsoft.com/detail/9MX2C6NNVD16?hl=en-au&amp;gl=AU&amp;ocid=pdpshare" role="button">Get from Microsoft Store</a>
+                <a href="https://apps.microsoft.com/detail/9MX2C6NNVD16?hl=en-au&amp;gl=AU&amp;ocid=pdpshare" role="button" onclick="return gtagSendEvent('https://apps.microsoft.com/detail/9MX2C6NNVD16?hl=en-au&amp;gl=AU&amp;ocid=pdpshare');">Get from Microsoft Store</a>
             </div>
             <p class="legal-meta"><small>Windows desktop app for PC only. Use of the software is subject to the <a href="/submissions-pdf-terms-licence.html">Submission PDF Terms &amp; Licence</a>.</small></p>
             <a href="/apps.html" class="back-link">Back to Tools</a>
