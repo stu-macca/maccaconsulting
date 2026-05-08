@@ -15,10 +15,14 @@
             window.location = url;
           }
         };
-        gtag('event', 'manual_event_PURCHASE', {
-          'event_callback': callback,
-          'event_timeout': 2000
-        });
+        if (typeof gtag === 'function') {
+          gtag('event', 'manual_event_PURCHASE', {
+            'event_callback': callback,
+            'event_timeout': 2000
+          });
+          return false;
+        }
+        window.location = url;
         return false;
       }
     </script>
@@ -79,8 +83,9 @@
             <p>Submission PDF is built for practical submissions work. It supports the final preparation stage of a tender by helping you convert files, package them, and organise them against a numbered Submission Register without overcomplicating the workflow.</p>
             <p>It is especially useful where submissions contain multiple response documents, supporting attachments, reused evidence files, and final naming requirements for upload portals or shared folders.</p>
             <div class="cta-row">
-                <a href="https://apps.microsoft.com/detail/9MX2C6NNVD16?hl=en-au&amp;gl=AU&amp;ocid=pdpshare" role="button" onclick="return gtagSendEvent('https://apps.microsoft.com/detail/9MX2C6NNVD16?hl=en-au&amp;gl=AU&amp;ocid=pdpshare');">Get from Microsoft Store</a>
+                <a href="https://apps.microsoft.com/detail/9MX2C6NNVD16?hl=en-au&amp;gl=AU&amp;ocid=pdpshare" role="button" onclick="return gtagSendEvent(this.href);">Get from Microsoft Store</a>
             </div>
+            <p><small>Viewing on mobile? Submission PDF is a Windows desktop app. Open this page on your Windows PC to install it from Microsoft Store.</small></p>
             <p class="legal-meta"><small>Windows desktop app for PC only. Use of the software is subject to the <a href="/submissions-pdf-terms-licence.html">Submission PDF Terms &amp; Licence</a>.</small></p>
             <a href="/apps.html" class="back-link">Back to Tools</a>
         </section>
@@ -153,15 +158,15 @@
                 <h3>Microsoft Store distribution</h3>
             </hgroup>
             <div class="pricing-panel">
-                <h3>Store listing coming soon</h3>
-                <span class="price-placeholder">Microsoft Store link pending</span>
+                <h3>Available from Microsoft Store</h3>
+                <span class="price-placeholder">Install and purchase through Microsoft Store</span>
                 <ul class="pricing-points">
-                    <li>Windows desktop app</li>
-                    <li>Microsoft Store release link to be added when published</li>
-                    <li>Store-based install and purchase flow when available</li>
+                    <li>Windows desktop app for PC</li>
+                    <li>Install through Microsoft Store</li>
+                    <li>Purchase through Microsoft Store</li>
                 </ul>
                 <div class="cta-row">
-                    <a href="https://apps.microsoft.com/detail/9MX2C6NNVD16?hl=en-au&amp;gl=AU&amp;ocid=pdpshare" role="button">Get from Microsoft Store</a>
+                    <a href="https://apps.microsoft.com/detail/9MX2C6NNVD16?hl=en-au&amp;gl=AU&amp;ocid=pdpshare" role="button" onclick="return gtagSendEvent(this.href);">Get from Microsoft Store</a>
                 </div>
             </div>
         </section>
@@ -215,7 +220,7 @@
             </details>
             <details>
                 <summary>How will availability work?</summary>
-                <p>A Microsoft Store listing will be added when it is available. Until then, this page explains the product, workflow, and intended release model.</p>
+                <p>Submission PDF is available through Microsoft Store for Windows PC install and purchase.</p>
             </details>
             <details>
                 <summary>Where is the Microsoft Store link?</summary>
