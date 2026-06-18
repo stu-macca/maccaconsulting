@@ -333,6 +333,76 @@ body#apps-page .apps-grid {
     text-align: center;
 }
 
+/* Product pages with detailed desktop screenshots */
+body#property-ledger-page,
+body#property-ledger-page * {
+    box-sizing: border-box;
+}
+
+body#property-ledger-page main.container {
+    max-width: 1040px;
+    width: 100%;
+}
+
+body#property-ledger-page main.container > section:not(.product-screenshots) {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body#property-ledger-page .app-hero-image {
+    max-width: 760px;
+}
+
+body#property-ledger-page img {
+    max-width: 100%;
+}
+
+body#property-ledger-page .cta-row a[role="button"] {
+    white-space: normal;
+}
+
+body#property-ledger-page .product-screenshots {
+    padding: 2rem;
+}
+
+body#property-ledger-page .product-screenshot-grid {
+    grid-template-columns: 1fr;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+body#property-ledger-page .product-screenshot-card {
+    display: grid;
+    grid-template-columns: minmax(0, 2.2fr) minmax(220px, 0.8fr);
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+}
+
+body#property-ledger-page .product-screenshot-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    margin: 0;
+}
+
+body#property-ledger-page .screenshot-copy {
+    min-width: 0;
+}
+
+body#property-ledger-page .product-screenshot-card h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.25rem;
+    line-height: 1.25;
+}
+
+body#property-ledger-page .product-screenshot-card p {
+    margin: 0;
+    font-size: 0.98rem;
+    line-height: 1.45;
+}
+
 /* Testimonials */
 section.testimonial {
     display: flex;
@@ -701,6 +771,48 @@ form select:focus {
 
     .auth-card {
         border-radius: 14px;
+    }
+
+    body#property-ledger-page .product-screenshots {
+        width: calc(100vw - 2rem);
+        max-width: calc(100vw - 2rem);
+        padding: 1rem 0.5rem;
+    }
+
+    body#property-ledger-page {
+        overflow-x: hidden;
+    }
+
+    body#property-ledger-page main.container {
+        width: 100vw;
+        max-width: 100vw;
+        padding: 1rem;
+        overflow-x: hidden;
+    }
+
+    body#property-ledger-page main.container > section {
+        width: calc(100vw - 2rem);
+        max-width: calc(100vw - 2rem);
+        overflow-x: hidden;
+    }
+
+    body#property-ledger-page .app-hero-image,
+    body#property-ledger-page .product-screenshot-card,
+    body#property-ledger-page .product-screenshot-card img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    body#property-ledger-page .product-screenshot-card {
+        grid-template-columns: 1fr;
+    }
+
+    body#property-ledger-page p,
+    body#property-ledger-page li,
+    body#property-ledger-page hgroup p,
+    body#property-ledger-page .cta-row a[role="button"] {
+        overflow-wrap: anywhere;
+        text-align: left;
     }
 }
 
