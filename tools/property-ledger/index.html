@@ -29,12 +29,14 @@
       gtag('config', 'G-4LCSVXLF1W');
 
       function trackStoreButtonClick(destination, callback) {
-        window.uetq = window.uetq || [];
-        window.uetq.push('event', 'store_button_click', {
-          event_category: 'Property Ledger',
-          event_label: destination || 'Microsoft Store',
-          event_value: 0
-        });
+        try {
+          window.uetq = window.uetq || [];
+          window.uetq.push('event', 'store_button_click', {
+            event_category: 'Property Ledger',
+            event_label: destination || 'Microsoft Store',
+            event_value: 0
+          });
+        } catch (error) {}
 
         if (typeof gtag === 'function') {
           if (typeof callback === 'function') {
@@ -48,22 +50,33 @@
             };
             var fallback = window.setTimeout(finish, 1200);
 
-            gtag('event', 'store_button_click', {
-              'link_url': destination,
-              'event_callback': function () {
-                window.clearTimeout(fallback);
-                finish();
-              },
-              'event_timeout': 1000
-            });
+            try {
+              gtag('event', 'store_button_click', {
+                'link_url': destination,
+                'event_callback': function () {
+                  window.clearTimeout(fallback);
+                  finish();
+                },
+                'event_timeout': 1000
+              });
+            } catch (error) {
+              window.clearTimeout(fallback);
+              finish();
+            }
           } else {
-            gtag('event', 'store_button_click', {
-              'link_url': destination
-            });
+            try {
+              gtag('event', 'store_button_click', {
+                'link_url': destination
+              });
+            } catch (error) {}
           }
         } else if (typeof callback === 'function') {
           callback();
         }
+      }
+
+      function navigateToStore(destination) {
+        window.location.href = destination;
       }
     </script>
     <meta charset="UTF-8">
@@ -320,19 +333,26 @@
                 }
 
                 if (!opensInSameTab) {
-                    trackStoreButtonClick(destination);
+                    if (link.dataset.storeClickPending !== 'true') {
+                        link.dataset.storeClickPending = 'true';
+                        trackStoreButtonClick(destination);
+                        window.setTimeout(function() {
+                            delete link.dataset.storeClickPending;
+                        }, 2000);
+                    }
+                    return;
+                }
+
+                if (link.dataset.storeClickPending === 'true') {
+                    event.preventDefault();
+                    navigateToStore(destination);
                     return;
                 }
 
                 event.preventDefault();
-
-                if (link.dataset.storeClickPending === 'true') {
-                    return;
-                }
-
                 link.dataset.storeClickPending = 'true';
                 trackStoreButtonClick(destination, function() {
-                    window.location.href = destination;
+                    navigateToStore(destination);
                 });
             });
         });
