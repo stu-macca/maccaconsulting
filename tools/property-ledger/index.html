@@ -7,6 +7,37 @@
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
       gtag('config', 'G-4LCSVXLF1W');
+
+      function trackStoreButtonClick(destination, callback) {
+        if (typeof gtag === 'function') {
+          if (typeof callback === 'function') {
+            var completed = false;
+            var finish = function () {
+              if (completed) {
+                return;
+              }
+              completed = true;
+              callback();
+            };
+            var fallback = window.setTimeout(finish, 1200);
+
+            gtag('event', 'store_button_click', {
+              'link_url': destination,
+              'event_callback': function () {
+                window.clearTimeout(fallback);
+                finish();
+              },
+              'event_timeout': 1000
+            });
+          } else {
+            gtag('event', 'store_button_click', {
+              'link_url': destination
+            });
+          }
+        } else if (typeof callback === 'function') {
+          callback();
+        }
+      }
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -88,7 +119,7 @@
             <p>The app helps rental-property owners organise rental statements, invoices, notices, CSV files and Excel rows into a reviewable draft ledger. It supports source-document review, monthly rental income and expense summaries, review cues, and CSV export workflows.</p>
             <p>Property Ledger is a working-paper tool. It is not tax advice and does not lodge tax returns. Users should review source documents, categories, totals and exported files before relying on them or giving them to an accountant.</p>
             <div class="cta-row">
-                <a href="https://apps.microsoft.com/detail/9P37F80DL1KM" role="button">Get Property Ledger from Microsoft Store</a>
+                <a href="https://apps.microsoft.com/detail/9P37F80DL1KM" role="button" data-store-cta>Get Property Ledger from Microsoft Store</a>
             </div>
             <p><small>Viewing on mobile? Property Ledger is a Windows desktop app. Open this page on your Windows PC to install it from Microsoft Store.</small></p>
             <p class="legal-meta"><small>Support: <a href="mailto:stuart@mcmillantendering.com.au?subject=Property%20Ledger%20Support">stuart@mcmillantendering.com.au</a></small></p>
@@ -173,7 +204,7 @@
                     <li>Support email: <a href="mailto:stuart@mcmillantendering.com.au?subject=Property%20Ledger%20Support">stuart@mcmillantendering.com.au</a></li>
                 </ul>
                 <div class="cta-row">
-                    <a href="https://apps.microsoft.com/detail/9P37F80DL1KM" role="button">Get Property Ledger from Microsoft Store</a>
+                    <a href="https://apps.microsoft.com/detail/9P37F80DL1KM" role="button" data-store-cta>Get Property Ledger from Microsoft Store</a>
                 </div>
             </div>
         </section>
@@ -244,6 +275,39 @@
         document.querySelector('.dropbtn').addEventListener('click', function() {
             const dropdownContent = document.querySelector('.dropdown-content');
             dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        document.querySelectorAll('a[data-store-cta]').forEach(link => {
+            link.addEventListener('click', function(event) {
+                const destination = link.href;
+                const isPropertyLedgerStoreLink = destination.includes('apps.microsoft.com') || destination.includes('9P37F80DL1KM');
+                const opensInSameTab = (!link.target || link.target.toLowerCase() === '_self') &&
+                    event.button === 0 &&
+                    !event.metaKey &&
+                    !event.ctrlKey &&
+                    !event.shiftKey &&
+                    !event.altKey;
+
+                if (!isPropertyLedgerStoreLink || event.defaultPrevented) {
+                    return;
+                }
+
+                if (!opensInSameTab) {
+                    trackStoreButtonClick(destination);
+                    return;
+                }
+
+                event.preventDefault();
+
+                if (link.dataset.storeClickPending === 'true') {
+                    return;
+                }
+
+                link.dataset.storeClickPending = 'true';
+                trackStoreButtonClick(destination, function() {
+                    window.location.href = destination;
+                });
+            });
         });
     </script>
 </body>
