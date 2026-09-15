@@ -565,6 +565,45 @@ section.testimonial.centered img.wide-logo {
     border-left: 5px solid #169bc1;
 }
 
+.testimonial-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin: 1.25rem 0;
+}
+
+.testimonial-fact {
+    padding: 0.9rem;
+    background-color: #eef4f7;
+    border: 1px solid #d7e4ea;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.testimonial-fact strong,
+.testimonial-fact span {
+    display: block;
+    text-align: center;
+}
+
+.testimonial-fact strong {
+    color: #063655;
+    font-size: 1.15rem;
+}
+
+.testimonial-subheading {
+    margin-top: 1.5rem;
+    color: #063655;
+    font-weight: 700;
+    text-align: left;
+}
+
+.testimonial-reference {
+    color: #4b5563;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
 /* Form overrides */
 form label {
     color: #063655 !important;
@@ -886,6 +925,10 @@ form select:focus {
 
     .testimonial-row {
         flex-direction: column;
+    }
+
+    .testimonial-facts {
+        grid-template-columns: 1fr;
     }
 
     .testimonial-row section {
