@@ -183,6 +183,34 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Keep the next homepage section visible as a clear scrolling cue. */
+body#index-page #home {
+    margin-bottom: 1rem;
+}
+
+body#index-page #home > section {
+    margin-bottom: 0;
+}
+
+body#index-page #home .scroll-cue {
+    margin: 0.75rem 0 0;
+    text-align: center;
+}
+
+body#index-page #home .scroll-cue a {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+body#index-page #services {
+    padding-top: 1rem;
+    scroll-margin-top: 80px;
+}
+
+body#index-page #services > section:first-child {
+    margin-top: 0;
+}
+
 /* Apps */
 .apps-grid,
 .screenshot-grid {
@@ -477,10 +505,64 @@ section.testimonial.centered img {
     align-self: center;
 }
 
+section.testimonial.centered img.wide-logo {
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0;
+    object-fit: contain;
+}
+
 .testimonial-row {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+}
+
+.featured-result .result-logo {
+    display: block;
+    width: 240px;
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto 1.25rem;
+}
+
+.featured-result blockquote {
+    max-width: 640px;
+    margin: 1.5rem auto;
+    padding: 1.25rem 1.5rem;
+    background-color: #f5f8fa;
+    border-left: 6px solid #169bc1;
+    border-radius: 0 8px 8px 0;
+}
+
+.featured-result blockquote p {
+    margin-top: 0;
+    font-size: 1.05rem;
+    font-style: italic;
+    text-align: left;
+}
+
+.featured-result blockquote footer {
+    color: #063655;
+    text-align: left;
+}
+
+.featured-result .result-summary {
+    max-width: 640px;
+    margin: 1rem auto;
+}
+
+.featured-result .result-link {
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+.testimonial-highlight {
+    padding: 1rem;
+    background-color: #f5f8fa;
+    border-left: 5px solid #169bc1;
 }
 
 /* Form overrides */
