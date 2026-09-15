@@ -75,7 +75,15 @@
     </ul>
     <ul class="nav-right">
       <li><a href="/index.html#home">Home</a></li>
-      <li><a href="/my-services.html">My Services</a></li>
+      <li class="services-nav-item">
+        <a href="/my-services.html" aria-haspopup="true">Services <span aria-hidden="true">&#9662;</span></a>
+        <ul class="services-nav-menu" aria-label="Services">
+          <li><a href="/my-services.html#ai-enabled-tendering">AI-Enabled Tendering</a></li>
+          <li><a href="/my-services.html#bid-tender-production-services">Bid/Tender Production</a></li>
+          <li><a href="/my-services.html#tendering-process-improvement">Tendering Process Improvement</a></li>
+          <li><a href="/my-services.html#win-strategy-formulation">Win Strategy</a></li>
+        </ul>
+      </li>
       <li><a href="/apps.html">Tools</a></li>
       <li><a href="/index.html#about">About Me</a></li>
       <li><a href="/index.html#contact">Contact Me</a></li>
@@ -86,7 +94,11 @@
       <button class="dropbtn">Menu</button>
       <div class="dropdown-content">
         <a href="/index.html#home">Home</a>
-        <a href="/my-services.html">My Services</a>
+        <a href="/my-services.html">Services Overview</a>
+        <a href="/my-services.html#ai-enabled-tendering" class="mobile-service-link">AI-Enabled Tendering</a>
+        <a href="/my-services.html#bid-tender-production-services" class="mobile-service-link">Bid/Tender Production</a>
+        <a href="/my-services.html#tendering-process-improvement" class="mobile-service-link">Tendering Process Improvement</a>
+        <a href="/my-services.html#win-strategy-formulation" class="mobile-service-link">Win Strategy</a>
         <a href="/apps.html">Tools</a>
         <a href="/index.html#about">About Me</a>
         <a href="/index.html#contact">Contact Me</a>
@@ -103,6 +115,9 @@
         <p>Winning Bids. Building Capability. Using AI with Confidence.</p>
       </hgroup>
       <p>I help businesses pursue complex tenders, develop effective win strategies and build fit-for-purpose tendering systems. Drawing on more than 25 years of bid experience, I use AI and automation where they improve speed and consistency, while retaining experienced human judgement over strategy, evidence, compliance, confidentiality and final quality.</p>
+      <div class="cta-row hero-cta">
+        <a href="/my-services.html#ai-enabled-tendering" role="button">Explore AI-Enabled Tendering</a>
+      </div>
       <p>Explore my services below.</p>
     </section>
   </main>
@@ -115,6 +130,14 @@
       </hgroup>
       <p>I provide flexible, expert-led support for tender submissions, using modern AI-enabled tools where appropriate to accelerate analysis, drafting and review while retaining human oversight of strategy, evidence, compliance and final quality.</p>
       <a href="/my-services.html#bid-tender-production-services">Read more</a>
+    </section>
+    <section>
+      <hgroup>
+        <h2>AI-Enabled Tendering</h2>
+        <h3>Practical, Controlled AI Adoption</h3>
+      </hgroup>
+      <p>I help businesses introduce AI into their tendering process in a practical and controlled way, improving speed, consistency and knowledge reuse without sacrificing strategy, judgement or quality.</p>
+      <a href="/my-services.html#ai-enabled-tendering">Read more</a>
     </section>
     <section>
       <hgroup>
@@ -132,27 +155,15 @@
       <p>I develop and facilitate win strategies that strengthen your competitive position and improve your prospects of success. AI can accelerate tender production, but customer understanding, competitive positioning and the decisions behind a winning strategy still require experienced commercial judgement.</p>
       <a href="/my-services.html#win-strategy-formulation">Read more</a>
     </section>
-    <section>
-      <hgroup>
-        <h2>AI-Enabled Tendering</h2>
-        <h3>Practical, Controlled AI Adoption</h3>
-      </hgroup>
-      <p>I help businesses introduce AI into their tendering process in a practical and controlled way, improving speed, consistency and knowledge reuse without sacrificing strategy, judgement or quality.</p>
-      <a href="/my-services.html#ai-enabled-tendering">Read more</a>
-    </section>
   </section>
 
   <section class="buy-section tools-promo">
     <h2>Software Tools</h2>
-    <p>We publish practical desktop tools for focused business workflows, including bid preparation, PDF handling, document preparation, submission workflows, and rental-property record preparation.</p>
-    <p>We also publish practical desktop tools, including Property Ledger, a Windows app for organising rental-property records into reviewable ledger working papers.</p>
+    <p>We publish practical desktop tools for focused business workflows, including bid preparation, PDF handling, document preparation and submission workflows.</p>
 
     <div class="cta-buttons">
       <a href="/apps.html" class="btn download-btn">
         Browse Tools
-      </a>
-      <a href="/tools/property-ledger/" class="btn download-btn">
-        Property Ledger
       </a>
     </div>
 
@@ -163,8 +174,8 @@
     <div class="how-it-works">
       <h3>What you'll find</h3>
       <ol>
-        <li>Specialised desktop tools for bid, submission and record preparation work</li>
-        <li>Apps that support PDF editing, conversion, file preparation and rental-property records</li>
+        <li>Specialised desktop tools for bid and submission preparation work</li>
+        <li>Apps that support PDF editing, conversion and file preparation</li>
         <li>Clear installation, usage and Microsoft Store availability information</li>
         <li>Current and future tools listed in one place</li>
       </ol>
@@ -178,7 +189,7 @@
         <h3>Learn More About My Mission</h3>
       </hgroup>
       <div class="text-center">
-        <img src="/profile.png" class="img-center" alt="Stuart McMillan, tendering consultant" loading="lazy" width="300" height="300">
+        <img src="/profile-stuart-mcmillan.jpg" class="profile-img" alt="Stuart McMillan, tendering consultant" loading="lazy" decoding="async" width="800" height="800">
       </div>
       <p>I am a sales and tendering consultant who has helped businesses pursue their revenue growth objectives through effective tendering processes and win strategies since 2000. I provide flexible consulting support, from focused strategic assignments and major tenders through to ongoing embedded tender capability. I started my career with Toyota New Zealand, where I first learned how to engineer and apply robust, right-sized processes. My tendering experience began with a start-up in the United Kingdom and grew through roles in Australia with global organisations including General Electric, Alstom and Landis+Gyr. Today, I combine that experience with practical use of AI and automation to help clients work more efficiently without compromising commercial judgement or submission quality.</p>
     </section>
