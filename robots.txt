@@ -1,4 +1,4 @@
-# Allow all crawlers access to all content
+# Public pages are crawlable; private routes and prototypes are excluded
 User-agent: *
 Disallow:
 
@@ -7,6 +7,7 @@ Disallow: /admin/
 Disallow: /login/
 Disallow: /register/
 Disallow: /config/
+Disallow: /big-phils/
 
 # Sitemap location (point at your GitHub Pages domain)
 Sitemap: https://mcmillantendering.com.au/sitemap.xml
