@@ -16,18 +16,19 @@
   document.querySelectorAll('[data-call]').forEach(link => {
     if (confirmedPhone) {
       link.href = `tel:${confirmedPhone.replace(/[^+\d]/g, '')}`;
-      link.querySelector('small')?.remove();
+      const small = link.querySelector('small');
+      if (small) small.textContent = config.phoneDisplay || confirmedPhone;
     } else if (contactDialog) {
       link.setAttribute('aria-haspopup', 'dialog');
       link.addEventListener('click', e => { e.preventDefault(); contactDialog.showModal(); });
     }
   });
   if (confirmedPhone) {
-    document.querySelectorAll('[data-phone-label]').forEach(el => { el.textContent = confirmedPhone; });
-    document.querySelectorAll('.quote-phone small').forEach(el => { el.textContent = confirmedPhone; });
+    document.querySelectorAll('[data-phone-label]').forEach(el => { el.textContent = config.phoneDisplay || confirmedPhone; });
   }
   if (config.email) document.querySelectorAll('[data-email-label]').forEach(el => {
-    const link = document.createElement('a'); link.href = `mailto:${config.email}`; link.textContent = config.email; el.replaceChildren(link);
+    if (el.tagName === 'A') { el.href = `mailto:${config.email}`; el.textContent = config.email; }
+    else { const link = document.createElement('a'); link.href = `mailto:${config.email}`; link.textContent = config.email; el.replaceChildren(link); }
   });
   if (config.serviceArea) {
     document.querySelectorAll('[data-service-area]').forEach(el => { el.textContent = `Service area: ${config.serviceArea}`; });
