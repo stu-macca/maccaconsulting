@@ -154,7 +154,7 @@
   document.querySelector('#start-again').addEventListener('click', () => {
     clearPhotos(); form.reset(); phone.setCustomValidity(''); syncEmail(); result.hidden = true; form.hidden = false; showStep(1);
   });
-  const serviceBySlug = { 'tree-removal': 'Tree removal', 'tree-pruning': 'Tree pruning', 'stump-grinding': 'Stump grinding' };
+  const serviceBySlug = { 'tree-removal': 'Tree removal', 'tree-pruning': 'Tree pruning', 'hollow-creation': 'Hollow creation' };
   const service = serviceBySlug[new URLSearchParams(location.search).get('service')];
   if (service) { const option = [...form.querySelectorAll('[name="service"]')].find(el => el.value === service); if (option) option.checked = true; }
   window.addEventListener('pagehide', () => {
